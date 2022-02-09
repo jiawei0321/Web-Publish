@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>DDM203_FinalWebsite_Menu Detail</title>
+<link href="styles/FinalWebsiteStyle.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="images/pokok_favicon.png">
+</head>
+<body>
+	
+<div class="navigationBar" id="nav">
+			<div class="logo">
+			<img src="images/logo_white.png" height="50px"  width="50px" alt="pokok logo">
+			</div>
+				<ul class="navigation">
+					<li><a href="DDM203_FinalWebsite1.html #home" onClick="toggleMenu();">Home</a></li>
+					<li><a href="DDM203_FinalWebsite1.html #about" onClick="toggleMenu();">About</a></li>
+					<li><a href="DDM203_FinalWebsite1.html #menu" onClick="toggleMenu();">Menu</a>
+						<ul id="subnav">
+						<li><a href="#menu">Pokok X Ello</a></li>
+						<li><a href="#menu">Mains</a></li>
+						<li><a href="#menu">Desserts</a></li>
+						<li><a href="#menu">Drinks</a></li>
+						</ul>
+					</li>
+					<li><a href="DDM203_FinalWebsite1.html #contact" onClick="toggleMenu();">Contact</a></li>
+					<a class="hamburgerIcon" onClick="hamburger();"></a>
+				</ul>
+				<div class="menuToggle" onClick="toggleMenu();"></div>
+			</div><!-- the end of navigation-->
+	
+<div id="menu_detail" class="menu_detail">
+	<div class="menudetail_area">
+		<div class="MenuimageBox">
+			<img class="MDfoodimg" src="images/dessert_2.png" alt="Box of 4 Tart">		
+
+			<div class="small_red_box"></div>
+		</div>
+	<div class="menuDcontent_box">		
+			<div class="menu_info5">
+				<h2>Box of 4 Tart</h2>
+				<h3>RM20</h3>
+				<p>4 happiness in 1 box.2 fruit tart topped with assorted berries  strawberries, blueberries and raspberry and 2 burnt  cheese tart with edible gold flakes.</p>
+				<div class="back_btn">
+					<a class="btn" href="DDM203_FinalWebsite1.html #menu">Back to Menu</a>
+				</div><!--the end of backbutton-->
+	</div><!--the end of info1-->
+</div><!--the end of menuDcontent_box-->
+	
+</div>	<!--the end of menudetail_area-->
+</div><!--the end of menu_detail-->
+	
+<!--footer-->
+<footer>
+<div class="footer">
+<div class="iconLink">
+	<a href="https://www.facebook.com/pokok.kl/" target="_blank"><img src="images/facebook_icon.png" width="40" height="40" alt="facebook_icon"/></a>
+
+	<a href="https://www.instagram.com/pokok.kl/" target="_blank"><img src="images/intsa_icon.png" width="40" height="40" alt="instagram_icon"/></a>
+	
+	<a href="https://wa.link/ef9htu" target="_blank"><img src=
+		"images/whatsapp_icon.png" width="40" height="40" alt="whatsapp_icon"/></a>
+	</div><!-- the end of iconLink-->
+	<div class="copyright">
+	<p>Copyright&copy; 2021.Jia Wei Inc. All Rights Reserved.</p>
+	</div><!-- the end of copyright-->
+	</div><!-- the end of footer-->
+	</footer>
+	
+	<!--javascript-->
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+	
+	var nav = document.getElementById('nav');
+	var subnav = document.getElementById('subnav');
+	window.onscroll = function(){
+		if(window.pageYOffset >100){
+			nav.style.background ="#DDD4C3";
+			nav.style.color ="#606161";
+			subnav.style.background ="#DDD4C3";
+			subnav.style.color="#606161";
+			/*scroll down navi bar text color change*/
+			var navigationColor = document.querySelector('.navigation');
+			navigationColor.classList.toggle('activeColor');
+		}
+		else {
+			nav.style.background = "transparent";
+			subnav.style.background ="transparent";
+		}
+	}
+	
+
+	
+	/*toggle menu function*/
+		function toggleMenu() {
+		var menuToggle = document.querySelector('.menuToggle');
+		menuToggle.classList.toggle('active');
+		var navigation = document.querySelector('.navigation');
+		navigation.classList.toggle('active');
+		$('ul li').click({
+			
+		})
+	}
+	</script>
+</body>
+</html>

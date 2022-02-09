@@ -1,0 +1,416 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>DDM203_FinalWebsite_Home</title>
+<link href="styles/FinalWebsiteStyle.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="images/pokok_favicon.png">
+</head>
+<body>
+	<!--navigation bar-->
+<div class="navigationBar" id="nav">
+			<div class="logo">
+			<img src="images/logo_white.png" height="50px"  width="50px" alt="pokok logo">
+			</div>
+				<ul class="navigation">
+					<li><a href="#home" onClick="toggleMenu();">Home</a></li>
+					<li><a href="#about" onClick="toggleMenu();">About</a></li>
+					<li><a href="#menu" onClick="toggleMenu();">Menu</a>
+						<ul id="subnav">
+						<li><a href="#menu">Pokok X Ello</a></li>
+						<li><a href="#menu">Mains</a></li>
+						<li><a href="#menu">Desserts</a></li>
+						<li><a href="#menu">Drinks</a></li>
+						</ul>
+					</li>
+					<li><a href="#contact" onClick="toggleMenu();">Contact</a></li>
+					<a class="hamburgerIcon" onClick="hamburger();"></a>
+				</ul>
+				<div class="menuToggle" onClick="toggleMenu();"></div>
+			</div><!-- the end of navigation-->
+
+	<!--home-->
+	<div id="home" class="home"></div>
+	<div class="home_area">
+		<div class="content_area">
+			<div class="home_content">
+			
+				<h2>Pokok.KL</h2>
+				<p>A decent cafe for you to unwind under <br/>a glass house in the midst of lush greenery. </p>
+				<a class="btn" href="#about">About Us</a>
+				<a class="btn" href="#menu">Menu</a>
+			</div><!-- the end of content-->
+		</div><!-- the end of content_area-->
+	</div><!-- the end of home_area-->
+
+	<!--about us-->
+<div id="about" class="about">
+	<div class="about_area">
+	<div class="content_box">
+		<div class="content2">
+			<h1>Our Humble<br>Beginning</h1>
+			
+			<p>Pokok KL was founded by Datuk Sharon Haniffa and his wife, Datin Christine Bong. Both of them are the founder and co- founder of the Brickhouse Group. </p>
+			<br>
+			<p>Pokok KL started in October 2018, and is well-known for its gorgeous glass architecture, serving wholesome brunch set in the midst of lush greenery in the middle of KL. We provide a variety of scrumptious food ranging from appetizer to dessert, and even party props!</p>
+			<br>
+			<p>Pokok KL has received much attentions from cafe hoppers and foodies. However, this doesn’t stop us from inventing new recipes and providing more services to offer our customer the best experience.</p>
+		</div><!-- the end of content2-->
+	<img src="images/about_1.png" class="foodimg" alt="foodImage">
+	<img src="images/about_2.png" class="founderimg" alt="founder picture">
+	<div class="whitebox"></div>
+	</div><!-- the end of content_box-->
+	</div><!-- the end of about_area-->
+</div><!-- the end of about-->
+
+<!--menu-->
+<div id="menu" class="menu">
+	<div class="slide_banner">
+		<!-- image slider start-->
+		<div class="slider">
+			<h1 class="text-Menu">Menu</h1>
+			<div class="slides">
+		<!-- radio buttons start-->
+				<input type="radio" name="radio-btn" id="radio1">
+				<input type="radio" name="radio-btn" id="radio2">
+				<input type="radio" name="radio-btn" id="radio3">
+				<input type="radio" name="radio-btn" id="radio4">
+		<!-- radio buttons end-->
+		<!-- slide image start-->	
+			<div class="slide first">
+				<img src="images/menubanner_1.png" alt="pokokXello">
+				</div><!-- the end of slide first-->
+			<div class="slide">
+				<img src="images/menubanner_2.png" alt="mains">
+				</div><!-- the end of slide first-->
+			<div class="slide">
+				<img src="images/menubanner_3.png" alt="desserts">
+				</div><!-- the end of slide first-->
+			<div class="slide">
+				<img src="images/menubanner_4.png" alt="drinks">
+				</div><!-- the end of slide first-->
+		<!-- slide image end-->
+		<!-- automatic navigation start-->
+				<div class="navigation-auto">
+					<div class="auto-btn1"></div>
+					<div class="auto-btn2"></div>
+					<div class="auto-btn3"></div>
+					<div class="auto-btn4"></div>
+				</div><!-- the end of navigation-auto-->
+		<!-- automatic navigation end-->	
+			</div><!-- the end of slides-->
+		<!-- manual navigation end-->
+				<div class="navigation-manual">
+					<label for="radio1" class="manual-btn"></label>
+					<label for="radio2" class="manual-btn"></label>
+					<label for="radio3" class="manual-btn"></label>
+					<label for="radio4" class="manual-btn"></label>
+				</div><!-- the end of navigation-auto-->
+		<!-- manual navigation end-->
+		</div><!-- the end of slider-->
+	<script type="text/javascript">
+	var counter = 1;	
+	setInterval(function(){
+		document.getElementById('radio' + counter).checked = true;
+		counter++;
+		if(counter>4){
+			counter = 1;
+		}
+	},5000);
+			
+	</script>
+		</div><!-- the end of slide_banner-->
+	
+	<div class="menu_area">
+		
+		<div class="menu_slider">
+		<nav>
+			<a class="list active" data-filter="pxe">Pokok X Ello</a>
+			<a class="list" data-filter="main">Mains</a>
+			<a class="list" data-filter="desserts" >Desserts</a>
+			<a class="list" data-filter="drinks">Drinks</a>
+			<div class="animation start-pxe"></div>
+		</nav>
+
+		</div><!-- the end menu_slider-->
+		<div class="menu-container">
+		<div class="all_menu">
+		<a href="DDM203_FinalWebsite2.html" class="itembox pxe"><div class="menu_choice">
+			<img src="images/sliderEllo_1.png" alt="salmon mentai">
+			<div class="menu_info">
+				<h2>Salmon Mentai</h2>
+				<h4>RM32</h4>
+				<p>Smocked salmon topped with generous amount of fresh mentai. A salmon lover must-try!</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->	
+		<a href="DDM203_FinalWebsite3.html" class="itembox pxe" ><div class="menu_choice">
+			<img src="images/sliderEllo_2.png" alt="buttermilk chicken">
+			<div class="menu_info">
+				<h2>Buttermilk Chicken</h2>
+				<h4>RM 12</h4>
+				<p>Creamy buttermilk chicken paired with sunny side up, spicy chili and fresh cucumber wrap in pita.</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->
+		<a href="DDM203_FinalWebsite4.html" class="itembox pxe" ><div class="menu_choice">
+			<img src="images/sliderEllo_3.png" alt="Avo Chick">
+			<div class="menu_info">
+				<h2>Avo Chick</h2>
+				<h4>RM 15</h4>
+				<p>Handmade pita wrapped with fresh guacamole and grilled chicken for a healthy and tasty meal.</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->
+		<a href="DDM203_FinalWebsite5.html" class="itembox pxe"><div class="menu_choice">
+			<img src="images/sliderEllo_4.png" alt="Big Beef Breakfast">
+			<div class="menu_info">
+				<h2>Big Beef Breakfast</h2>
+				<h4>RM15</h4>
+				<p>Pita wrapped with juicy grilled beef and scrambled egg to kick-start your wonderful day.</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->
+			
+			
+			<a href="DDM203_FinalWebsite6.html" class="itembox main " style="display: none;"><div class="menu_choice">
+			<img src="images/sliderMains_1.png" alt="Big Breakfast">
+			<div class="menu_info">
+				<h2>Big Breakfast</h2>
+				<h4>RM35</h4>
+				<p>Pick your choice of eggs, sourdough toast, gourmet sausages, ham withtomatoes, mushroom and potatoes</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->
+			
+			<a href="DDM203_FinalWebsite7.html" class="itembox main" style="display: none;"><div class="menu_choice">
+			<img src="images/sliderMains_2.png" alt="Char Kuew Teow">
+			<div class="menu_info">
+				<h2>Char Kuew Teow</h2>
+				<h4>RM15</h4>
+				<p>Stir-fried Chinese inspired rice flat noodles with fish cake, taugeh, prawn and clams fresh from the sea..</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->
+			
+			<a href="DDM203_FinalWebsite8.html" class="itembox main " style="display: none;"><div class="menu_choice">
+			<img src="images/sliderMains_3.png" alt="Nasi Lemak Platter">
+			<div class="menu_info">
+				<h2>Nasi Lemak Platter</h2>
+				<h4>RM18</h4>
+				<p>Crispy Ayam Berempah/ Beef rendang, kangkung and nasi lemak condiments and egg.</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->
+			
+			<a href="DDM203_FinalWebsite9.html" class="itembox main" style="display: none;"><div class="menu_choice">
+			<img src="images/sliderMains_4.png" alt="Smoked Sausage Benedict">
+			<div class="menu_info">
+				<h2>Smoked Sausage Benedict</h2>
+				<h4>RM28</h4>
+				<p>Smoked juicy sausage topped with 2 poached eggs, hollandaise sauce, and a side of sauteed mushroom.</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->
+			
+			
+			<a href="DDM203_FinalWebsite10.html" class="itembox desserts " style="display: none;"><div class="menu_choice">
+			<img src="images/sliderDessert_1.png" alt="Apam Balik Cake">
+			<div class="menu_info">
+				<h2>Apam Balik Cake</h2>
+				<h4>RM15</h4>
+				<p>3 layered cake with perfectly roasted peanut and apam balik flavor cake with creamy filling and jagung.</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->
+			
+			<a href="DDM203_FinalWebsite11.html" class="itembox desserts" style="display: none;"><div class="menu_choice">
+			<img src="images/sliderDessert_2.png" alt="Box of 4 Tart">
+			<div class="menu_info">
+				<h2>Box of 4 Tart</h2>
+				<h4>RM20</h4>
+				<p>2 fruit tart with strawberries, blueberries, raspberry and 2 burnt cheese tart with edible gold flakes.</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->
+			
+			<a href="DDM203_FinalWebsite12.html" class="itembox desserts " style="display: none;"><div class="menu_choice">
+			<img src="images/sliderDessert_3.png" alt="New York Cheesecake">
+			<div class="menu_info">
+				<h2>New York Cheesecake</h2>
+				<h4>RM17</h4>
+				<p>Creamy cheesecake that is made in New York style with dense, smooth and creamy consistency.</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->
+			
+			<a href="DDM203_FinalWebsite13.html" class="itembox desserts" style="display: none;"><div class="menu_choice">
+			<img src="images/sliderDessert_4.png" alt="Mango Passionfruit Palvova">
+			<div class="menu_info">
+				<h2>Mango Passionfruit Palvova</h2>
+				<h4>RM19</h4>
+				<p>Crispy meringue topped with generous portion of mango cube and passionfruit, with edible flower.</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->
+			
+			<a href="DDM203_FinalWebsite14.html" class="itembox drinks " style="display: none;"><div class="menu_choice">
+			<img src="images/sliderDrinks_1.png" alt="Biscoff Latte">
+			<div class="menu_info">
+				<h2>Biscoff Latte</h2>
+				<h4>RM19</h4>
+				<p>Traditional espresso with textured milk and a delicate layer of milk crema on top with bidcoff biscuit</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->
+			
+			<a href="DDM203_FinalWebsite15.html" class="itembox drinks" style="display: none;"><div class="menu_choice">
+			<img src="images/sliderDrinks_2.png" alt="Creamy Hazelnut">
+			<div class="menu_info">
+				<h2>Creamy Hazelnut</h2>
+				<h4>RM22</h4>
+				<p>Roasted arabica coffee and buttery, toasted hazelnut flavor with nutty and creamy hazelnut ice cream.</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->
+			
+			<a href="DDM203_FinalWebsite16.html" class="itembox drinks " style="display: none;"><div class="menu_choice">
+			<img src="images/sliderDrinks_3.png" alt="pokoknut">
+			<div class="menu_info">
+				<h2>Pokok nut</h2>
+				<h4>RM12</h4>
+				<p>Carefully selected high quality coconut with with silky smooth drupe and plenty amount of coconut juice.</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->
+			
+			<a href="DDM203_FinalWebsite17.html" class="itembox drinks" style="display: none;"><div class="menu_choice">
+			<img src="images/sliderDrinks_4.png" alt="Cuppucino">
+			<div class="menu_info">
+				<h2>Cuppuccino</h2>
+				<h4>RM10</h4>
+				<p>Classic espresso made by freshly roasted high-quality coffee bean with steamed and frothed milk.</p>
+			</div><!-- menu_info-->	
+		</div></a><!-- menu_choice-->
+			
+		</div><!-- all_menu-->
+			</div><!--menu-container-->
+	</div><!-- the end of menu_area-->	
+</div><!-- the end of menu-->
+	
+	<!--contact-->
+<div id="contact" class="contact">
+	<div class="contact_area">
+		<div class="content3">
+			<h2>Contact Us</h2>
+		</div><!-- the end of content3-->
+		<div class="ContentContainer">
+
+			<div class="contactForm contactCol">
+				<form>
+					<h2>Leave Us a Message</h2>
+					<div class="inputBox">
+						<input type="text" name="" required="required">
+						<span>Full Name</span>
+					</div><!-- the end of input Box-->	
+					<div class="inputBox">
+						<input type="text" name="" required="required">
+						<span>Email</span>
+					</div><!-- the end of input Box-->	
+					<div class="inputBox">
+						<textarea class="Message" required="required"></textarea>
+						<span>Message</span>
+					</div><!-- the end of input Box-->
+					<div class="inputBox">
+						<input type="submit" name="" value="Send">
+					</div><!-- the end of input Box-->
+				</form>
+				<div class="contact_info">
+				<div class="contactBox">
+						<div class="icon"><img src="images/open_icon.png" height="50px" width="50px" alt="opening hour"/></div>
+					<div class="information">
+					<p>10am-8pm (Saturday : 10am-9pm)</p>
+					</div><!-- the end of text-->
+				</div><!-- the end of box-->
+				<div class="contactBox">
+					<div class="icon"><img src="images/phone_icon.png" height="50px" width="50px" alt="phone"/></div>
+					<div class="information">
+					<p>03-84081811</p>
+					</div><!-- the end of text-->
+				</div><!-- the end of contentBox-->
+			</div><!-- the end of contact_info-->
+			</div><!-- the end of contactForm-->
+	<div class="map_box contactCol">
+			
+			<div class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.911598931623!2d101.64742781454203!3d3.118084697729505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4936f6be668d%3A0x1018d850bf0a7a8c!2sPOKOK%20KL%20Cafe!5e0!3m2!1sen!2smy!4v1640499163757!5m2!1sen!2smy" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div><!-- the end of map-->
+			<div class="redsquare"></div><!-- the end of redsquare-->
+			</div><!-- the end of mapbox-->
+		</div><!-- the end of contentcontainer-->
+			</div><!-- the end of contact_area-->
+</div><!-- the end of contact-->
+	
+<!--footer-->
+<footer>
+<div class="footer">
+<div class="iconLink">
+	<a href="https://www.facebook.com/pokok.kl/" target="_blank"><img src="images/facebook_icon.png" width="40" height="40" alt="facebook_icon"/></a>
+
+	<a href="https://www.instagram.com/pokok.kl/" target="_blank"><img src="images/intsa_icon.png" width="40" height="40" alt="instagram_icon"/></a>
+	
+	<a href="https://wa.link/ef9htu" target="_blank"><img src=
+		"images/whatsapp_icon.png" width="40" height="40" alt="whatsapp_icon"/></a>
+	</div><!-- the end of iconLink-->
+	<div class="copyright">
+	<p>Copyright&copy; 2021.Jia Wei Inc. All Rights Reserved.</p>
+	</div><!-- the end of copyright-->
+	</div><!-- the end of footer-->
+	</footer>
+
+	<!--javascript-->
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+	
+	var nav = document.getElementById('nav');
+	var subnav = document.getElementById('subnav');
+	window.onscroll = function(){
+		if(window.pageYOffset >100){
+			nav.style.background ="#DDD4C3";
+			nav.style.color ="#606161";
+			subnav.style.background ="#DDD4C3";
+			subnav.style.color="#606161";
+			/*scroll down navi bar text color change*/
+			var navigationColor = document.querySelector('.navigation');
+			navigationColor.classList.toggle('activeColor');
+		}
+		else {
+			nav.style.background = "transparent";
+			subnav.style.background ="transparent";
+		}
+	}
+	
+
+	
+	/*toggle menu function*/
+		function toggleMenu() {
+		var menuToggle = document.querySelector('.menuToggle');
+		menuToggle.classList.toggle('active');
+		var navigation = document.querySelector('.navigation');
+		navigation.classList.toggle('active');
+		$('ul li').click({
+			
+		})
+	}
+	
+	$(document).ready(function(){
+		$('.list').click(function(){
+			const value = $(this).attr('data-filter');
+			if(value=='all'){
+				$('.itembox').show('1000')/*show how many item out*/
+			}
+			else{
+				$('.itembox').not('.'+value).hide('1000');
+				$('.itembox').filter('.'+value).show('1000');
+				
+			}
+		})
+		
+		$('.list').click(function(){
+			$(this).addClass('active').siblings().removeClass('active'); 
+		 })
+	})
+</script>
+	
+	
+</body>
+</html>
